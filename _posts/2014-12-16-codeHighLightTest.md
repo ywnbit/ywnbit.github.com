@@ -5,11 +5,9 @@ layout: default
 CodeHighLightTest
 ===
 
-{% highlight c %}
-
+```c
 #include <iostream>
 int main(){
 	printf("Hello World.\n");
 }
-
-{% endhighlight %}
+```
