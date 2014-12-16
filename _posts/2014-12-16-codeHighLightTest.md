@@ -1,9 +1,9 @@
 CodeHighLightTest
 ===
 
-{% hightlight c++ %}
+{% highlight c++ %}
 	#include <iostream>
 	int main(){
 		printf("Hello World.\n");
 	}
-{% endhightlight %}
+{% endhighlight %}
