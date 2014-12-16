@@ -5,7 +5,7 @@ layout: default
 CodeHighLightTest
 ===
 
-```c
+```C++
 #include <iostream>
 int main(){
 	printf("Hello World.\n");
