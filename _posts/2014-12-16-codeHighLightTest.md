@@ -5,7 +5,7 @@ layout: default
 CodeHighLightTest
 ===
 
-{% highlight c++ %}
+{% highlight c %}
 #include <iostream>
 int main(){
 	printf("Hello World.\n");
