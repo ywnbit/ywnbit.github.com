@@ -11,5 +11,3 @@ int main(){
 	printf("Hello World.iIlL1\n");
 }
 {% endhighlight %}
-
-啦啦啦啦
