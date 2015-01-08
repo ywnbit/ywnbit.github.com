@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="home">
+
+    <h1>Categories</h1>
+
+    {% for cat in site.categories %} 
+	<a href="index.html#{{ cat[0] }}"><span class="label label-primary">{{ cat[0] }}</span><span class="badge">{{ cat[1].size }}</span></a>
+    {% endfor %} 
+
+    {% for cat in site.categories %} 
+    <div class="jumbotron">
+	<div class="container-fluid">
+	    <a name="{{ cat[0] }}"></a>
+	    <h3>{{ cat[0] }}</h3> 
+	    {% for post in cat[1] %} 
+	    <hr>
+	    <h4>
+		<table width="100%">
+		    <tr>
+			<td>
+			    <a href="{{ post.url }}">
+				{{ post.title }}
+			    </a>
+			</td>
+			<td align=right>
+			    <small>
+				<span class="glyphicon glyphicon-time"></span>
+				{{ post.date | date_to_string }}
+			    </small>
+			</td>
+		    </tr>
+		</table>
+	    </h4>
+	    {% endfor %} 
+	</div>
+    </div>
+    {% endfor %} 
+</div>

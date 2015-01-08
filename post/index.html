@@ -4,18 +4,55 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+    <h1>Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+    <!-- Loop output paged posts -->
+    {% for post in paginator.posts %}
+    <div class="jumbotron">
+	<div class="container-fluid">
+	<h3>
+	    <table width="100%">
+		<tr>
+		    <td>
+			<a href="{{ post.url }}">
+			    {{ post.title }}
+			</a>
+		    </td>
+		    <td align=right>
+			<small>
+			    <span class="glyphicon glyphicon-time"></span>
+			    {{ post.date | date_to_string }}
+			</small>
+		    </td>
+		</tr>
+	    </table>
+	</h3>
+	{{ post.excerpt }}
+	<p> <a href="{{ post.url }}"><span >阅读全文 &raquo; </span></a></p>
+	</div>
+    </div>
     {% endfor %}
-  </ul>
-  
+    <!-- Pager indicator -->
+    <ul class="pager">
+	{% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
+	<li class="previous">
+	    <a href="{{ site.url }}/">
+		&larr; Older
+	    </a>
+	</li>
+	{% else %}
+	<li class="previous">
+	    <a href="{{ site.url }}/page{{ paginator.previous_page }}">
+		&larr; Older
+	    </a>
+	</li>
+	{% endif %} {% endif %} {% if paginator.next_page %}
+	<li class="next">
+	    <a href="{{ site.url }}/page{{ paginator.next_page }}">
+		Newer &rarr;
+	    </a>
+	</li>
+	{% endif %}
+    </ul>
+
 </div>

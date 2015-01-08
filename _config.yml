@@ -9,6 +9,9 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  ywnbit
 encoding: utf-8
 
+paginate: 8
+paginate_path: "post/page:num"
+
 # Build settings
 markdown: kramdown
 highlighter: pygments
