@@ -5,10 +5,12 @@ layout: default
 <div class="home">
 
     <h1>Tags</h1>
+    <hr/>
 
     {% for cat in site.tags %} 
 	<a href="index.html#{{ cat[0] }}"><span class="label label-primary">{{ cat[0] }}</span><span class="badge">{{ cat[1].size }}</span></a>
     {% endfor %} 
+    <hr/>
 
     {% for cat in site.tags %} 
     <div class="jumbotron">
