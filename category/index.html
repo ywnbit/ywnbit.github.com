@@ -5,14 +5,13 @@ layout: default
 <div class="home">
 
     <h1>Categories</h1>
-	
-	<hr/>
-
+    <hr/>
+    <h4>
     {% for cat in site.categories %} 
-	<h4><a href="index.html#{{ cat[0] }}"><span class="label label-primary">{{ cat[0] }}</span><span class="badge">{{ cat[1].size }}</span></a></h4>
+    <a href="index.html#{{ cat[0] }}"><span class="label label-primary">{{ cat[0] }}</span><span class="badge">{{ cat[1].size }}</span></a>
     {% endfor %} 
-
-	<hr/>
+    </h4>
+    <hr/>
 	
     {% for cat in site.categories %} 
     <div class="jumbotron">

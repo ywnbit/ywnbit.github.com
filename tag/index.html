@@ -7,9 +7,11 @@ layout: default
     <h1>Tags</h1>
     <hr/>
 
+    <h4>
     {% for cat in site.tags %} 
-	<a href="index.html#{{ cat[0] }}"><span class="label label-primary">{{ cat[0] }}</span><span class="badge">{{ cat[1].size }}</span></a>
+    <a href="index.html#{{ cat[0] }}"><span class="label label-primary">{{ cat[0] }}</span><span class="badge">{{ cat[1].size }}</span></a>
     {% endfor %} 
+    </h4>
     <hr/>
 
     {% for cat in site.tags %} 
